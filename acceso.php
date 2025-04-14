@@ -14,26 +14,22 @@
     <form name="Iniciar sesion" method="post"> 
 
         <div class="container">
-          <fieldset id="caja">
-
-            <legend id="titulo-caja"> ✈️ </legend>
-
-              <div id="dato-nombre">
+              <div class="sub-container" id="dato-nombre">
                 <label for="email">Email </label>
-                <input type="email" class="form-email" name="email" placeholder="Ingrese email">
+                <input type="email" class="form-email" name="email">
               </div>
 
-              <div id="dato-contraseña">
+              <div class="sub-container" id="dato-contraseña">
                 <label for="contraseña">Contraseña </label>
-                <input type="password" maxlength="8" class="form-password" name="contraseña" placeholder="Contraseña">
+                <input type="password" maxlength="8" class="form-password" name="contraseña">
               </div>
 
-              <div id="botones">
-                <input type="submit" name="ingreso">
+              <div class="button-container" id="botones">
+                <input type="submit" name="ingreso" value="Entrar">
                 <button><a href="registro.php">Registrarme</button></a>
-              </div>
-              
-          </fieldset>
+              </div> 
+
+
         </div>
       </form>
       <?php 

@@ -1,70 +1,119 @@
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'lato', sans-serif;
-    text-align: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "lato", sans-serif;
+  text-align: center;
+}
+
+form {
+  width: 30%;
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-    background: url(imagenes/vacaciones.jpg) no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url(imagenes/vacaciones.jpg) no-repeat center center/cover;
 }
 
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    min-height: 50vh;
-    width: 80vh;
-    max-width: 500px;
-    background-color: white;
-    border: 4px solid black;
-    background: url(imagenes/maleta.jpg) no-repeat center center/cover;
-    color: rgb(255, 255, 255);
+  backdrop-filter: blur(10px) brightness(0.7);
+  color: rgb(255, 255, 255);
+  padding: 30px;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
 }
 
 .ok {
-    padding: 12px;
-    text-align: center;
-    width: 100%;
-    background-color: green;
-    color: white;
-    position: fixed;
-    top: 80vh;
+  padding: 12px;
+  text-align: center;
+  width: 100%;
+  background-color: green;
+  color: white;
+  position: fixed;
+  top: 80vh;
 }
 
 .bad {
-    padding: 12px;
-    text-align: center;
-    width: 100%;
-    background-color: red;
-    color: white;
-    position: fixed;
-    top: 80vh;
+  padding: 12px;
+  text-align: center;
+  width: 100%;
+  background-color: red;
+  color: white;
+  position: fixed;
+  top: 80vh;
 }
 
 #titulo-caja {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 #caja {
-    min-height:10vh;
-    width: 30vh;
-    max-width: 600px;
-    background-color: aliceblue;
-    color: black;
+  min-height: 10vh;
+  width: 30vh;
+  max-width: 600px;
+  background-color: aliceblue;
+  color: black;
 }
 
 #botones {
-    padding: 0;
-    margin: 1vh;
+  padding: 0;
+  margin: 1vh;
 }
 
+.sub-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: self-start;
+  align-items: stretch;
 
+  input {
+    outline: none;
+    border: none;
+    background: linear-gradient(to top, rgb(16 57 83 / 36%), rgba(0, 0, 0, 0));
+    padding: 5px 10px;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+  }
+
+  label {
+    text-align: start;
+  }
+
+  input::placeholder {
+    color: #fff;
+  }
+}
+
+.button-container {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+
+  input,
+  button,
+  a {
+    text-decoration: none;
+    background-color: transparent;
+    color: #fff;
+  }
+
+  input,
+  button {
+    cursor: pointer;
+    border: 1px solid #fff;
+    padding: 5px 10px;
+    flex-grow: 1;
+  }
+
+  input {
+    background: rgb(16 57 83);
+  }
+}
