@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Reservar Servicio</title>
+</head>
+<body>
+    <h2>Realizar una Reserva</h2>
+    <form action="procesar_reserva.php" method="POST">
+        <label for="id_cliente">ID Cliente:</label>
+        <input type="number" name="id_cliente" required><br><br>
+
+        <label for="fecha_reserva">Fecha de Reserva:</label>
+        <input type="date" name="fecha_reserva" required><br><br>
+
+        <label for="id_vuelo">ID Vuelo:</label>
+        <input type="number" name="id_vuelo" required><br><br>
+
+        <label for="id_hotel">ID Hotel:</label>
+        <input type="number" name="id_hotel" required><br><br>
+
+        <button type="submit">Reservar</button>
+    </form>
+</body>
+</html>

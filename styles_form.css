@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background: url(imagenes/vacaciones.jpg) no-repeat center center/cover;
+}
+
+#form-hotel {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    width: 80vh;
+    background-color: white;
+    border: 4px solid black;
+    background: url(imagenes/maleta.jpg) no-repeat center center/cover;
+}
+
+h2 {
+    position: absolute;
+    align-self: flex-start;
+    padding: 2vh;
+    background-color: white;
+    margin: 0.5vh;
+}
+
+#form-vuelo {
+    position:relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    width: 80vh;
+    background-color: white;
+    border: 4px solid black;
+    background: url(imagenes/maleta.jpg) no-repeat center center/cover;
+}
+
+input {
+    margin: 1vh;
+}
+
+

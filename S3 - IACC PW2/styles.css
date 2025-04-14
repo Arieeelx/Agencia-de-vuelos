@@ -1,0 +1,14 @@
+body {
+    background-color: rgb(228, 205, 181);
+}
+
+fieldset {
+    text-align: center;
+    margin-top: 20px;
+   }
+   #results-container {
+    background-color: rgb(242, 217, 183);
+    color: black;
+    grid-row: auto;
+    margin-top: 20px;
+   }

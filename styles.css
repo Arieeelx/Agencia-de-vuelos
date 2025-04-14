@@ -1,0 +1,70 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'lato', sans-serif;
+    text-align: center;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background: url(imagenes/vacaciones.jpg) no-repeat center center/cover;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    width: 80vh;
+    max-width: 500px;
+    background-color: white;
+    border: 4px solid black;
+    background: url(imagenes/maleta.jpg) no-repeat center center/cover;
+    color: rgb(255, 255, 255);
+}
+
+.ok {
+    padding: 12px;
+    text-align: center;
+    width: 100%;
+    background-color: green;
+    color: white;
+    position: fixed;
+    top: 80vh;
+}
+
+.bad {
+    padding: 12px;
+    text-align: center;
+    width: 100%;
+    background-color: red;
+    color: white;
+    position: fixed;
+    top: 80vh;
+}
+
+#titulo-caja {
+    font-size: 1.5rem;
+}
+
+#caja {
+    min-height:10vh;
+    width: 30vh;
+    max-width: 600px;
+    background-color: aliceblue;
+    color: black;
+}
+
+#botones {
+    padding: 0;
+    margin: 1vh;
+}
+
+

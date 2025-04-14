@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'lato', sans-serif;
+    text-align: center;
+}
+
+body {
+    background: url(imagenes/vacaciones.jpg) no-repeat center center/cover;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+#formu {
+    padding: 2vh;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+#dest {
+    padding: 2vh;
+
+}
+
+#desd {
+    padding: 2vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+#Cantidad {
+    padding: 2vh;
+    display: flex;
+    justify-content: center;
+
+}
+
+
