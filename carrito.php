@@ -7,11 +7,24 @@ if (empty($_SESSION['carrito'])) {
 
 } else {
     echo "<h3>Tu carrito:</h3>";
-    foreach ($_SESSION['carrito'] as $paqueteId => $producto) {
-        echo "Producto ID: " . $paqueteId . "<br>" . " Nombre: " . $producto['nombre'] . "<br>"  . " Cantidad: " . $producto['cantidad'] . "<br>"  . " Precio unitario: $" . $producto['precio']  . " <a href='eliminar_prod.php?id=" . $paqueteId . "'>Eliminar</a><br><br>";
-    }
-};
+    foreach ($_SESSION['carrito'] as $id => $producto) {
+        echo "<p>";
+    
+        if (isset($producto['nombre'])) {
 
+            echo "Nombre: " . $producto['nombre'] . "<br>";
+        } elseif (isset($producto['origen']) && isset($producto['destino'])) {
+
+            echo "Vuelo: " . $producto['origen'] . " → " . $producto['destino'] . "<br>";
+        }
+    
+        echo "Cantidad: " . $producto['cantidad'] . "<br>";
+        echo "Precio unitario: $" . $producto['precio'] . "<br>";
+        echo "<a href='eliminar_prod.php?id=$id'>Eliminar</a><br><br>";
+    
+        echo "</p>";
+    }
+}
 ?>
 
 <!DOCTYPE html>

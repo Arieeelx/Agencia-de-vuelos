@@ -35,7 +35,7 @@
                 <input type="number" id="tarifa" name="tarifa" step="5" placeholder="Valor por noche"><br>
                 <input type="submit" value="Registrar Hotel">
                 <input type="reset">
-                <button><a href="puente2.html">Volver menu formularios</a></button>
+                <button><a href="formulariodeingresosVyH.html">Volver menu formularios</a></button>
             </form>
     </div> 
 </body>

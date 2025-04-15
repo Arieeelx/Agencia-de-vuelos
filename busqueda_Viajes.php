@@ -75,7 +75,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $resultados = Viaje::busquedaViajes($viajes, $criterio);
 
     if (!empty($resultados)) {
-        echo "<h3>Resultados</h3>";
+        echo "<h3>Paquetes encontrados:</h3>";
         foreach ($resultados as $viaje) {
             echo "<p>" . $viaje->mostrarDetalles() . "</p>";
             echo "
@@ -110,11 +110,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <legend>🧳Búsqueda de viajes🧳</legend>
 
                 <form method="post">
-
+                    <br>
                     <div id="dest">
                         <input type="text" name="destino" placeholder="Lugar de destino">
                     </div>
-
+                    
                     <div id="desd">
                         <input type="date" name="fecha">
                     </div>
@@ -122,11 +122,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <div id="Cantidad">
                         <input type="number" name="dias" min="1" max="30" placeholder="Cantidad de días">
                     </div>
-
                     <div id="buscador">
                         <input type="submit" value="Buscar">
                         <a href="carrito.php"><input type="button" value="Carrito"></a>
                     </div>
+                    <br>
+                    <button><a href="busqueda_Vuelos.php">Buscar vuelos</a></button>
+                    <button><a href="busqueda_Hotel.php">Buscar hoteles</a></button>
+                    <br>
                     <br>
                     <button><a href="acceso.php">Cerrar Sesión</a></button>
                 </form>
