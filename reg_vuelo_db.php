@@ -41,7 +41,7 @@
                 <input type="number" id="precio" name="precio" step="5" placeholder="Precio"><br>
                 <input type="submit" value="Registrar Vuelo">
                 <input type="reset">
-                <button><a href="puente2.html">Volver menu formularios</a></button>
+                <button><a href="formulariodeingresosVyH.html">Volver menu formularios</a></button>
             </form>
     </div>
 </body>
