@@ -1,17 +1,17 @@
 <?php
-// Conexión a la base de datos (ajusta con tus datos)
+
 $conexion = mysqli_connect("localhost", "root", "", "agencia");
 
-// Verifica si se conectó bien
+
 if (!$conexion) {
     die("Error de conexión: " . mysqli_connect_error());
 }
 
-// Verifica si se envió el formulario
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nombreHotel = $_POST["hotel"];
 
-    // Consulta básica para buscar hoteles por nombre
+
     $consulta = "SELECT * FROM hotel WHERE nombre LIKE '%$nombreHotel%'";
     $resultado = mysqli_query($conexion, $consulta);
 }
@@ -27,7 +27,6 @@ if (isset($resultado) && mysqli_num_rows($resultado) > 0) {
     }
 }
 ?>
-
 
 <!DOCTYPE html>
 <html lang="es">

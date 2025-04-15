@@ -1,3 +1,34 @@
+<?php
+
+$conexion = mysqli_connect("localhost", "root", "", "agencia");
+
+
+if (!$conexion) {
+    die("Error de conexión: " . mysqli_connect_error());
+}
+
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $vuelo = isset($_POST["vuelo"]) ? $_POST["vuelo"] : "";
+
+
+    $consulta = "SELECT * FROM vuelo WHERE origen LIKE '%$vuelo%'";
+    $resultado = mysqli_query($conexion, $consulta);
+}
+
+if (isset($resultado) && mysqli_num_rows($resultado) > 0) {
+    echo "<h3>Vuelos encontrados:</h3>";
+    while ($fila = mysqli_fetch_assoc($resultado)) {
+        echo "<p>
+                ✈️ Origen: " . $fila["origen"] . " - " . "📍 Destino " . $fila["destino"] . "📅 Fecha:" . $fila["fecha"] . " - 💸$" . $fila["precio"] . " por noche
+                <br><button><a href='agregar.php?id_vuelo=" . $fila['id_vuelo'] . "'>Agregar al carrito</a></button>
+                <br>
+              </p>";
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
     <head>

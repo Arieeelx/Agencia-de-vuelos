@@ -41,35 +41,64 @@ if (!$conexion) {
 }
 
 
-if (isset($_GET['id_hotel'])) {
+    if (isset($_GET['id_hotel'])) {
 
-    $id_hotel = $_GET['id_hotel'];
+        $id_hotel = $_GET['id_hotel'];
 
 
-    $consulta = "SELECT * FROM hotel WHERE id_hotel = $id_hotel";
+        $consulta = "SELECT * FROM hotel WHERE id_hotel = $id_hotel";
+        $resultado = mysqli_query($conexion, $consulta);
+
+        if (mysqli_num_rows($resultado) > 0) {
+
+            $hotel = mysqli_fetch_assoc($resultado);
+
+    
+            if (isset($_SESSION['carrito'][$id_hotel])) {
+                $_SESSION['carrito'][$id_hotel]['cantidad']++;
+            } else {
+    
+                $_SESSION['carrito'][$id_hotel] = [
+                    'nombre' => $hotel['nombre'],
+                    'cantidad' => 1,
+                    'precio' => $hotel['tarifa_noche']
+                ];
+            }
+        } else {
+
+            echo "Hotel no encontrado.";
+        }
+    }
+
+if (isset($_GET['id_vuelo'])) {
+
+    $id_vuelo = $_GET['id_vuelo'];
+
+
+    $consulta = "SELECT * FROM vuelo WHERE id_vuelo = $id_vuelo";
     $resultado = mysqli_query($conexion, $consulta);
 
     if (mysqli_num_rows($resultado) > 0) {
 
-        $hotel = mysqli_fetch_assoc($resultado);
+        $vuelo = mysqli_fetch_assoc($resultado);
 
  
-        if (isset($_SESSION['carrito'][$id_hotel])) {
-            $_SESSION['carrito'][$id_hotel]['cantidad']++;
+        if (isset($_SESSION['carrito'][$id_vuelo])) {
+            $_SESSION['carrito'][$id_vuelo]['cantidad']++;
         } else {
   
-            $_SESSION['carrito'][$id_hotel] = [
-                'nombre' => $hotel['nombre'],
+            $_SESSION['carrito'][$id_vuelo] = [
+                'origen' => $vuelo['origen'],
+                'destino' => $vuelo['destino'],
                 'cantidad' => 1,
-                'precio' => $hotel['tarifa_noche']
+                'precio' => $vuelo['precio']
             ];
         }
     } else {
 
-        echo "Hotel no encontrado.";
+        echo "Vuelo no encontrado.";
     }
 }
-
 
 header('Location: puente.html');
 
